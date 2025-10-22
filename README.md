@@ -2,4 +2,4 @@
 
 This is a project about some github basics
 
-The conflicts were solved
+The conflicts were not solved
