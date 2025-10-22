@@ -2,4 +2,4 @@
 
 This is a project about some github basics
 
-Some changes
+Some changes made here
