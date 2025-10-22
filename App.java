@@ -2,41 +2,6 @@ import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class App {
-    // public static void main(String[] args) throws Exception {
-        
-    //     Scanner scanner = new Scanner(System.in);
-    //     System.out.println("Principal: ");
-    //     int principal = scanner.nextInt();
-        
-    //     System.out.println("Annual Interest Rate: ");
-    //     float rate = scanner.nextFloat();
-
-    //     System.out.println("Period (Years): ");
-    //     byte years = scanner.nextByte();
-
-    //     float monthlyRate = rate / 100 / 12;
-    //     int numberOfPayments = years * 12;
-
-    //     double mortgage = principal * (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
-                
-    //     NumberFormat currency = NumberFormat.getCurrencyInstance();
-    //     String mortgageFormatted = currency.format(mortgage);
-    //     System.out.println("Mortgage: " + mortgageFormatted);
-    // }
-
-    // public static void main(String[] args) {
-    //     String role = "admin";
-    //     if (role == "admin") 
-    //         System.out.println("You have full access");
-    //      else 
-    //         System.out.println("You have limited access");
-
-    //     String[] fruits = {"apple", "banana", "cherry"};
-    //     for (String fruit : fruits) {
-    //         System.out.println(fruit);
-    //     }
-    // }
-
     public static void main(String[] args) throws Exception {
         
         Scanner scanner = new Scanner(System.in);
