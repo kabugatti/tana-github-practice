@@ -39,8 +39,11 @@ public class App {
             }
         }
 
-        float monthlyRate = rate / 100 / 12;
-        int numberOfPayments = years * 12;
+    final float PERCENT = 100f;
+    final int MONTHS_IN_YEAR = 12;
+
+    float monthlyRate = rate / PERCENT / MONTHS_IN_YEAR;
+    int numberOfPayments = years * MONTHS_IN_YEAR;
 
         double mortgage = principal * (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
                 
