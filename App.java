@@ -9,25 +9,34 @@ public class App {
         System.out.println("Principal: ");
         int principal = scanner.nextInt();
 
-        while (principal < 1000 || principal > 1_000_000) {
-            System.out.println("Enter a number between 1,000 and 1,000,000");
-            principal = scanner.nextInt();
-        }
-        
         System.out.println("Annual Interest Rate: ");
         float rate = scanner.nextFloat();
-
-        while(rate <= 0 || rate > 30) {
-            System.out.println("Enter a value between 1 and 30");
-            rate = scanner.nextFloat();
-        }
 
         System.out.println("Period (Years): ");
         byte years = scanner.nextByte();
 
-        while (years < 1 || years > 30) {
-            System.out.println("Enter a number between 1 and 30");
-            years = scanner.nextByte();
+        // Single validation loop for all inputs (DRY)
+        boolean valid = false;
+        while (!valid) {
+            valid = true;
+
+            if (principal < 1000 || principal > 1_000_000) {
+                System.out.println("Enter a number between 1,000 and 1,000,000");
+                principal = scanner.nextInt();
+                valid = false;
+            }
+
+            if (rate <= 0 || rate > 30) {
+                System.out.println("Enter a value between 1 and 30");
+                rate = scanner.nextFloat();
+                valid = false;
+            }
+
+            if (years < 1 || years > 30) {
+                System.out.println("Enter a number between 1 and 30");
+                years = scanner.nextByte();
+                valid = false;
+            }
         }
 
         float monthlyRate = rate / 100 / 12;
